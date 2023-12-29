@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/golang-jwt/jwt"
 	"github.com/joho/godotenv"
 )
@@ -82,6 +83,16 @@ func Setup() {
 	if err != nil {
 		log.Fatal("Erro ao carregar o arquivo .env")
 	}
+}
+
+func GetDatabase() *sql.DB {
+	db, err := ConnectMYSQL()
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
+
+	return db
 }
 
 /* --------------- LOG INITIALIZE --------------- */
