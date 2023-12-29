@@ -17,8 +17,8 @@ var (
 	projet_author     string
 	projet_version    string
 	projet_build      string
-	generator_name    string
-	generator_version string
+	generator_name    string = "Condlink Studio"
+	generator_version string = "v0.0.6"
 
 	jwt_secret string
 
