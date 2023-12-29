@@ -76,7 +76,7 @@ func SetDatabaseName(name string) {
 }
 
 /* --------------- LOG INITIALIZE --------------- */
-func logInitialize() {
+func Initialize() {
 
 	// log blue color message welcome to projectName
 	log.Printf("\033[35;1mWelcome to %s!\033[0m", projet_name)
