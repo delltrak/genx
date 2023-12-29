@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	"github.com/golang-jwt/jwt"
+	"github.com/joho/godotenv"
 )
 
 var (
@@ -75,8 +76,16 @@ func SetDatabaseName(name string) {
 	database_name = name
 }
 
+func Setup() {
+	/* ----- Carrega as variáveis de ambiente ----- */
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Erro ao carregar o arquivo .env")
+	}
+}
+
 /* --------------- LOG INITIALIZE --------------- */
-func Initialize() {
+func Init() {
 
 	// log blue color message welcome to projectName
 	log.Printf("\033[35;1mWelcome to %s!\033[0m", projet_name)
