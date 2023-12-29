@@ -181,7 +181,7 @@ func Secure(handlerFunc http.Handler) http.Handler {
 }
 
 /* --------------- DATABASE --------------- */
-func connectMySQL() (*sql.DB, error) {
+func ConnectMYSQL() (*sql.DB, error) {
 
 	// log yellow color message trying to connect to database
 	log.Println("\033[33mTrying to connect to database...\033[0m")
