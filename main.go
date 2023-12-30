@@ -45,14 +45,6 @@ func SetProjectBuild(build string) {
 	projet_build = build
 }
 
-func SetGeneratorName(name string) {
-	generator_name = name
-}
-
-func SetGeneratorVersion(version string) {
-	generator_version = version
-}
-
 func SetJwtSecret(secret string) {
 	jwt_secret = secret
 }
